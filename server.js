@@ -151,7 +151,7 @@ function getForecast(req, resp) {
       resp.json(data);
     }, FORECAST_DELAY);
   }).catch((err) => {
-    console.error('Dark Sky API Error:', err.message);
+   // console.error('Dark Sky API Error:', err.message);
     resp.json(generateFakeForecast(location));
   });
 }
@@ -174,7 +174,7 @@ function startServer() {
     const path = `"${req.method} ${req.path}"`;
     const m = `${req.ip} - ${time} - ${path}`;
     // eslint-disable-next-line no-console
-    console.log(m);
+   // console.log(m);
     next();
   });
 
